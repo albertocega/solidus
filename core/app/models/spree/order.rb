@@ -95,8 +95,8 @@ module Spree
     has_many :order_promotions, class_name: 'Spree::OrderPromotion'
     has_many :promotions, through: :order_promotions
 
-    # Payments
-    has_many :payments, dependent: :destroy, inverse_of: :order
+    # Payments ISSUE_CHANGE_PAYPAL_GATEWAY
+    has_many :payments, dependent: :destroy
 
     # Returns
     has_many :return_authorizations, dependent: :destroy, inverse_of: :order
